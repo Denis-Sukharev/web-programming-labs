@@ -46,3 +46,26 @@ function makeStairs() {
         steps[i].innerHTML = 'Блок номер ' + (i+1);
     }
 }
+
+function makeSnezhinki() {
+    let snegopad = document.querySelector('#snegopad');
+    let stepCount = 50;
+    for (let i = 0; i<stepCount; i++) {
+        snegopad.innerHTML += '<img class="snezhinki" src="1.png">';
+    }
+    let snezhinki = document.querySelectorAll('.snezhinki');
+    let screenWidth = window.screen.width;
+    let screenHeight = window.screen.height;
+
+    for (let i = 0; i<snezhinki.length; i++) 
+    {
+        snezhinki[i].style.left = Math.random() * (screenWidth-50) + 'px';
+        snezhinki[i].style.top = Math.random() * (screenHeight-50) + 'px';
+        snezhinki[i].style.width= Math.random() * 100 + 'px';
+    }
+}
+
+function Rabota() {
+    makeStairs();
+    makeSnezhinki();   
+}
