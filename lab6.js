@@ -69,3 +69,14 @@ function showAlert2() {
     let color = 'rgb(' + r + ',' + g + ',' + b + ')';
     document.getElementById('footer').style.backgroundColor = color;
 }
+
+function showAlert3() {
+    alert('Правильно, так и надо!');
+}
+
+function Knopka() {
+    let button = document.getElementById('net-button');
+    button.style.position = "absolute";
+    button.style.left = Math.random() * 1000 + "px";
+    button.style.top = Math.random() * 1000 + "px";
+}
