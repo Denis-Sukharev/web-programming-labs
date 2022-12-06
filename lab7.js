@@ -57,8 +57,7 @@ function makeSnezhinki() {
     let screenWidth = window.screen.width;
     let screenHeight = window.screen.height;
 
-    for (let i = 0; i<snezhinki.length; i++) 
-    {
+    for (let i = 0; i<snezhinki.length; i++) {
         snezhinki[i].style.left = Math.random() * (screenWidth-50) + 'px';
         snezhinki[i].style.top = Math.random() * (screenHeight-50) + 'px';
         snezhinki[i].style.width= Math.random() * 100 + 'px';
@@ -82,6 +81,14 @@ function Rap() {
 
     }
 }
+
+function TY() {
+    let stepCount = 9;
+    
+    for (let i = 0; i<stepCount; i++) {
+        document.write ((i+1) + ' * 35 = ' + ((i+1)*35) + "<br>");
+    }
+}   
 
 function Rabota() {
     makeStairs();
