@@ -24,3 +24,12 @@ function showTime() {
 
 window.addEventListener('load', showTime);
 setInterval(showTime, 1000);
+
+function showNewDate(params) {
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let days = document.querySelector('input[type=number]').value;
+    let NewDate = birthday.getTime() + days*1000*60*60*24;
+    NewDate = new Date(NewDate).toLocaleDateString();
+    results.innerHTML = 'Дата после прибавления: ' + NewDate;
+}
