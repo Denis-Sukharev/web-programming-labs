@@ -22,3 +22,25 @@ window.addEventListener('DOMContentLoaded', function() {
     let coords = document.querySelector('#coords');
     coords.addEventListener('mousemove', showCoords);
 });
+
+function knopka(button) {
+    if(button.innerHTML == 'Нажми меня') {
+        button.innerHTML = 'Ещё раз нажми';
+        button.style.color = 'green';
+    }
+        
+    else if(button.innerHTML == 'Ещё раз нажми') {
+        button.innerHTML = 'Ещё';  
+        button.style.color = 'red';
+    }
+         
+    else if(button.innerHTML == 'Ещё') {
+        button.innerHTML = 'Начать сначала';   
+        button.style.color = 'blue';
+    }
+        
+    else {
+        button.innerHTML = 'Нажми меня' 
+        button.style.color = 'orange'; 
+    }
+}
