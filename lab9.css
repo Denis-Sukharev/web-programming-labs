@@ -27,3 +27,13 @@ body {
     left: 0;
     right: 0;
 }
+
+#coords {
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    color: azure;
+    text-align: center;
+    align-items: center;
+    line-height: 30;
+}
