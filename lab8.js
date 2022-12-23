@@ -1,7 +1,24 @@
 function showDate(params) {
     let out = document.getElementById('today');
     let today = new Date();
-    out.innerHTML = today.toLocaleDateString('ru-RU');
+    Year = today.getFullYear();
+    Month = today.getMonth();
+    Day = today.getDate();
+    switch (Month) {
+    case 0: fMonth="января"; break;
+    case 1: fMonth="февраля"; break;
+    case 2: fMonth="марта"; break;
+    case 3: fMonth="апреля"; break;
+    case 4: fMonth="мая"; break;
+    case 5: fMonth="июня"; break;
+    case 6: fMonth="июля"; break;
+    case 7: fMonth="августа"; break;
+    case 8: fMonth="сентября"; break;
+    case 9: fMonth="октября"; break;
+    case 10: fMonth="ноября"; break;
+    case 11: fMonth="декабря"; break;
+    }
+    out.innerHTML = Day + " " + fMonth + " " + Year + " года";
 }
 
 function showDaysCount(params) {
@@ -19,7 +36,10 @@ window.addEventListener('load', showDate);
 function showTime() {
     let outTime = document.getElementById('time');
     let currentTime = new Date();
-    outTime.innerHTML = currentTime.toLocaleTimeString('ru');
+    Hour = currentTime.getHours();
+    Minutes = currentTime.getMinutes();
+    Seconds = currentTime.getSeconds();
+    outTime.innerHTML = Hour + " ч " + Minutes + " м " + Seconds + " с";
 }
 
 window.addEventListener('load', showTime);
@@ -30,6 +50,23 @@ function showNewDate(params) {
     let birthday = new Date(inputDate.value);
     let days = document.querySelector('input[type=number]').value;
     let NewDate = birthday.getTime() + days*1000*60*60*24;
-    NewDate = new Date(NewDate).toLocaleDateString();
-    results.innerHTML = 'Дата после прибавления: ' + NewDate;
+    NewDate = new Date(NewDate);
+    Year = NewDate.getFullYear();
+    Month = NewDate.getMonth();
+    Day = NewDate.getDate();
+    switch (Month) {
+    case 0: fMonth="января"; break;
+    case 1: fMonth="февраля"; break;
+    case 2: fMonth="марта"; break;
+    case 3: fMonth="апреля"; break;
+    case 4: fMonth="мая"; break;
+    case 5: fMonth="июня"; break;
+    case 6: fMonth="июля"; break;
+    case 7: fMonth="августа"; break;
+    case 8: fMonth="сентября"; break;
+    case 9: fMonth="октября"; break;
+    case 10: fMonth="ноября"; break;
+    case 11: fMonth="декабря"; break;
+    }
+    results.innerHTML = 'Дата после прибавления: ' + Day + " " + fMonth + " " + Year + " года";
 }
