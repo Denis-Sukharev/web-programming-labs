@@ -44,3 +44,23 @@ function knopka(button) {
         button.style.color = 'orange'; 
     }
 }
+
+function showFocus(event) {
+    event.target.style.color = 'green';
+    event.target.style.fontSize = "25px";
+}
+
+function showBlur(event) {
+    event.target.style.color = 'black';
+    event.target.style.fontSize = "14px";
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    let texts = document.querySelectorAll('input[type="text"]');
+    texts[0].addEventListener('focus', showFocus);
+    texts[1].addEventListener('focus', showFocus);
+    texts[2].addEventListener('focus', showFocus);
+    texts[0].addEventListener('blur', showBlur);
+    texts[1].addEventListener('blur', showBlur);
+    texts[2].addEventListener('blur', showBlur);
+});
