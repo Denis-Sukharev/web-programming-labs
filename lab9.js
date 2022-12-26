@@ -75,3 +75,24 @@ let texts = document.querySelectorAll('input[type="text"]');
     texts[1].addEventListener('change', showOutput);
     texts[2].addEventListener('change', showOutput);
 })
+
+window.addEventListener('DOMContentLoaded', function() {
+    var prod1 = document.getElementById('prod1');
+    var prod2 = document.getElementById('prod2');
+    prod1.addEventListener('change', function() {
+        prod2.value = prod1.value;
+})});
+
+window.addEventListener('DOMContentLoaded', function() {
+    var prod3 = document.getElementById('prod3');
+    var prod4 = document.getElementById('prod4');
+    prod3.addEventListener('change', function() {
+        prod4.value = prod3.value;
+})});
+
+window.addEventListener('DOMContentLoaded', function() {
+    var prod5 = document.getElementById('prod5');
+    var prod6 = document.getElementById('prod6');
+    prod5.addEventListener('change', function() {
+        prod6.value = prod5.value;
+})});
